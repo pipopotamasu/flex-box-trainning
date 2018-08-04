@@ -3,6 +3,8 @@
   height: 300px;
   color: #fff;
   background: #eee;
+  display: flex;
+  flex-wrap: wrap;
 }
 .box {
   width: 80px;
