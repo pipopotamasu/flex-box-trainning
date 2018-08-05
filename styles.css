@@ -1,17 +1,35 @@
-.container {
-  width: 300px;
-  height: 300px;
-  color: #fff;
+header, footer {
   background: #eee;
+}
+.container {
   display: flex;
-  flex-wrap: wrap;
 }
-.box {
-  width: 80px;
-  height: 80px;
+.left {
+  flex: 0 100px;
+  background: tomato;
 }
-.box-1 { background: tomato; }
-.box-2 { background: slategray; }
-.box-3 { background: pink; }
-.box-4 { background: skyblue; }
-.box-5 { background: limegreen; }
+.right {
+  flex: 0 100px;
+  background: pink;
+}
+.center {
+  flex: 1;
+  background: skyblue;
+}
+@media all and (max-width: 500px) {
+  .container {
+    flex-direction: column;
+  }
+  .center {
+    order: 1;
+    flex: 100%;
+  }
+  .left {
+    order: 2;
+    flex: 100%;
+  }
+  .right {
+    order: 3;
+    flex: 100%;
+  }
+}
